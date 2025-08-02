@@ -12,6 +12,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.qualitycard.burningembers.BurningEmbers;
 import net.qualitycard.burningembers.lodestone.packets.ModPackets;
 import net.qualitycard.burningembers.lodestone.packets.ParticleSpawnPacket;
 
@@ -22,12 +23,19 @@ public class RoaringInferno extends SwordItem {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
-    
+    public static int hits = 0;
 
     @Override
     public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity) {
             World world = player.getWorld();
             if (!world.isClient()) {
+                hits += 1;
+                BurningEmbers.LOGGER.info(String.valueOf(stack.getOrCreateNbt().getBoolean("activated")));
+                stack.getOrCreateNbt().putBoolean("activated", hits > 4);
+                if (hits > 4) {
+                    hits = 0;
+                }
+
 
                 Vec3d orginalPos = Vec3d.ofCenter(entity.getBlockPos());
 
