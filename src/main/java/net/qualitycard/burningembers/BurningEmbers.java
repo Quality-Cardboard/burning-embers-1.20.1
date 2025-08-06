@@ -2,6 +2,10 @@ package net.qualitycard.burningembers;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+import net.qualitycard.burningembers.damage_type.ModDamageTypes;
+import net.qualitycard.burningembers.effect.ModEffects;
+import net.qualitycard.burningembers.event.InfernalHudRendererCallback;
 import net.qualitycard.burningembers.item.ModItems;
 import net.qualitycard.burningembers.lodestone.packets.ModClientPackets;
 import net.qualitycard.burningembers.lodestone.packets.ModPackets;
@@ -15,7 +19,11 @@ public class BurningEmbers implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModDamageTypes.registerDamageTypes();
+		ModEffects.registerEffects();
 		ModPackets.registerPackets();
 		ModClientPackets.registerClientPackets();
+
+		HudRenderCallback.EVENT.register(new InfernalHudRendererCallback());
 	}
 }
