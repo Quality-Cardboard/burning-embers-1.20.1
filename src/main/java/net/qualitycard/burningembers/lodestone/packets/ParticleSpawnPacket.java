@@ -49,11 +49,11 @@ public class ParticleSpawnPacket {
     }
 
     public static void spawnExampleParticles(World level, Vec3d pos, Color startingColor, Color endingColor) {
-        WorldParticleBuilder.create(LodestoneParticleRegistry.WISP_PARTICLE)
-                .setScaleData(GenericParticleData.create(20f, 50f,0f).build())
+        WorldParticleBuilder.create(LodestoneParticleRegistry.STAR_PARTICLE)
+                .setScaleData(GenericParticleData.create(1f, 2f,0f).build())
                 .setTransparencyData(GenericParticleData.create(2f).build())
                 .setColorData(ColorParticleData.create(startingColor, endingColor).setCoefficient(1.4f).setEasing(Easing.ELASTIC_IN).build())
-                .setLifetime(100)
+                .setLifetime(40)
                 .addMotion(0, 0.01f, 0)
                 .enableNoClip()
                 .spawn(level, pos.x, pos.y +1 , pos.z);

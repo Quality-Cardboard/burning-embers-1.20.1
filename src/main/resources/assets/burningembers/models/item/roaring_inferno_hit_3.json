@@ -1,7 +1,7 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "burningembers:item/roaring_inferno_activated"
+    "layer0": "burningembers:item/roaring_inferno_hit_3"
   },
   "display": {
     "thirdperson_righthand": {

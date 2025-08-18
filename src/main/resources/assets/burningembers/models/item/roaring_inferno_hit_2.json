@@ -1,24 +1,16 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "burningembers:item/roaring_inferno"
+    "layer0": "burningembers:item/roaring_inferno_hit_2"
   },
-  "overrides": [
-    {"predicate": {"burningembers:hit_1": 1},
-      "model": "burningembers:item/roaring_inferno_hit_1"},
-    {"predicate": {"burningembers:hit_2": 1},
-      "model": "burningembers:item/roaring_inferno_hit_2"},
-    {"predicate": {"burningembers:hit_3": 1},
-      "model": "burningembers:item/roaring_inferno_hit_3"}
-  ],
   "display": {
     "thirdperson_righthand": {
-      "rotation": [0, 90, 40],
+      "rotation": [0, 60, 40],
       "translation": [0, 15, 0],
       "scale": [2.0, 2.0, 1.0]
     },
     "thirdperson_lefthand": {
-      "rotation": [0, 90, -40],
+      "rotation": [0, -120, -40],
       "translation": [0, 15, 0],
       "scale": [2.0, 2.0, 1.0]
     },

@@ -18,7 +18,7 @@ public class InfernalHudRendererCallback implements HudRenderCallback {
                 int green = 255; // Green component of the color
                 int blue = 255; // Blue component of the color
                 int color = (alpha << 24) | (red << 16) | (green << 8) | blue;
-                Identifier texture = new Identifier("minecraft", "textures/block/fire_0 .png");
+                Identifier texture = new Identifier("burningembers", "textures/screen/infernal_outline.png");
                 // texture, x, y, u, v, width, height, textureWidth, textureHeight
 
                 float screenWidth = context.getScaledWindowWidth();
