@@ -1,0 +1,10 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "burningembers:item/emp"
+  },
+  "overrides": [
+    {"predicate": {"burningembers:deactivated": 1},
+      "model": "burningembers:item/emp_deactivated"}
+  ]
+}

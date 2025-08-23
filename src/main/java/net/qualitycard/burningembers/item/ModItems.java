@@ -6,16 +6,20 @@ import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.qualitycard.burningembers.BurningEmbers;
-import net.qualitycard.burningembers.item.custom.LodestoneDI;
+import net.qualitycard.burningembers.item.custom.AncientCompass;
+import net.qualitycard.burningembers.item.custom.EMP;
 import net.qualitycard.burningembers.item.custom.RoaringInferno;
 
 public class ModItems {
     public static final Item ROARING_INFERNO = registerItem("roaring_inferno",
-            new RoaringInferno(ToolMaterials.NETHERITE, 4, -1.5f, new FabricItemSettings()));
-    public static final Item LDI = registerItem("ldi",
-            new LodestoneDI.LodeStoneDI(new Item.Settings()));
-
+            new RoaringInferno(ToolMaterials.NETHERITE, 4, -1.5f,
+                    new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+    public static final Item ANCIENT_COMPASS = registerItem("ancient_compass",
+            new AncientCompass(new FabricItemSettings().fireproof().maxCount(1)));
+    public static final Item EMP = registerItem("emp",
+            new EMP(new FabricItemSettings().maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BurningEmbers.MOD_ID, name), item);

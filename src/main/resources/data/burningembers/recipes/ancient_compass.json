@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "$$$",
+    "#@#",
+    "$$$"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "@": {
+      "item": "minecraft:redstone_block"
+    },
+    "$": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "burningembers:ancient_compass"
+  }
+}

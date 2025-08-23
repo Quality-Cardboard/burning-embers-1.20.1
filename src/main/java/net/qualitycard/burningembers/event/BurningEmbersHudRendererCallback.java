@@ -4,10 +4,9 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.util.Identifier;
-import net.qualitycard.burningembers.BurningEmbers;
 import net.qualitycard.burningembers.effect.ModEffects;
 
-public class InfernalHudRendererCallback implements HudRenderCallback {
+public class BurningEmbersHudRendererCallback implements HudRenderCallback {
     @Override
     public void onHudRender(DrawContext context, float v) {
         MinecraftClient client = MinecraftClient.getInstance();
