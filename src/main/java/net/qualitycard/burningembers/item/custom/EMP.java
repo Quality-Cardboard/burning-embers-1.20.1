@@ -41,6 +41,7 @@ public class EMP extends Item {
             for (Entity selectedEntity : entitiesList) {
                 if (selectedEntity != user) {
                     if (selectedEntity instanceof LivingEntity livingEntity) {
+                        user.tiltScreen( 1, 1);
                         livingEntity.damage(ModDamageTypes.of(world, ModDamageTypes.ELECTRICITY), 2f);
                         livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200, 1));
                         if (selectedEntity instanceof PlayerEntity player) {
@@ -49,14 +50,16 @@ public class EMP extends Item {
                             player.getItemCooldownManager().set(player.getEquippedStack(EquipmentSlot.CHEST).getItem(), 200);
                             player.getItemCooldownManager().set(player.getEquippedStack(EquipmentSlot.LEGS).getItem(), 200);
                             player.getItemCooldownManager().set(player.getEquippedStack(EquipmentSlot.FEET).getItem(), 200);
+
+                            player.tiltScreen(1, 1);
                         }
-                        livingEntity.addVelocity(0, -2, 0);
+                        livingEntity.addVelocity(0, -5, 0);
                     }
                     selectedEntity.pushAwayFrom(user);
                 }
             }
             world.playSound(null, BlockPos.ofFloored(user.getPos()), ModSounds.EMP_EXPLOSION, SoundCategory.MASTER, 10f, 1f);
-            user.getItemCooldownManager().set(this, 2000);
+            user.getItemCooldownManager().set(this, 1400);
 
         }
         return super.use(world, user, hand);
