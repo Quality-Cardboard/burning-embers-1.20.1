@@ -18,7 +18,7 @@ public class PlayerEntityRendererMixin {
     @Inject(method = "getArmPose", at = @At("HEAD"), cancellable = true)
     private static void burningembers$getArmPoseDR(AbstractClientPlayerEntity player, Hand hand, CallbackInfoReturnable<BipedEntityModel.ArmPose> cir) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if (itemStack.getItem() instanceof RoaringInferno && itemStack.getOrCreateNbt().getBoolean("activated")) {
+        if (itemStack.getItem() instanceof RoaringInferno && itemStack.getOrCreateNbt().getBoolean("hit_3")) {
             cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_CHARGE);
         }
     }

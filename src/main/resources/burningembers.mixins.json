@@ -5,6 +5,14 @@
 	"mixins": [
 		"PlayerEntityRendererMixin"
 	],
+	"client": [
+		"SolarFlareBackgroundRendererMixin",
+		"SolarFlareClientWorldMixin",
+		"SolarFlareWorldRendererMixin"
+	],
+	"server": [
+
+	],
 	"injectors": {
 		"defaultRequire": 1
 	},

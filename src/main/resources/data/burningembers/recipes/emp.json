@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#@#",
+    "#$#",
+    "#@#"
+  ],
+  "key": {
+    "@": {
+      "item": "minecraft:redstone_dust"
+    },
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "$": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "result": {
+    "item": "burningembers:ancient_compass"
+  }
+}

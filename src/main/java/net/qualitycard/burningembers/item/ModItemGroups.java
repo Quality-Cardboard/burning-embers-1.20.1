@@ -20,7 +20,14 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.burningembers.burningembers_item_group"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.ROARING_INFERNO);
+                        entries.add(ModItems.MECHANICAL_FIRE);
                         entries.add(ModItems.ANCIENT_COMPASS);
+                        entries.add(ModItems.EMP);
+
+                        entries.add(ModItems.MECHANICAL_FIRE_MASK);
+                        entries.add(ModItems.MECHANICAL_FIRE_CHESTPLATE);
+                        entries.add(ModItems.MECHANICAL_FIRE_LEGGINGS);
+                        entries.add(ModItems.MECHANICAL_FIRE_BOOTS);
                     })
                     .build()
     );

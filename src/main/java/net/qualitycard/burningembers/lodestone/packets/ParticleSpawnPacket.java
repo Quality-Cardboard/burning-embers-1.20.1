@@ -43,12 +43,12 @@ public class ParticleSpawnPacket {
             if (level != null) {
                 Color startColor = new Color(startingColor);
                 Color endColor = new Color(endingColor);
-                spawnExampleParticles(level, position, startColor, endColor);
+                spawnRoaringInfernoParticles(level, position, startColor, endColor);
             }
         });
     }
 
-    public static void spawnExampleParticles(World level, Vec3d pos, Color startingColor, Color endingColor) {
+    public static void spawnRoaringInfernoParticles(World level, Vec3d pos, Color startingColor, Color endingColor) {
         WorldParticleBuilder.create(LodestoneParticleRegistry.STAR_PARTICLE)
                 .setScaleData(GenericParticleData.create(1f, 2f,0f).build())
                 .setTransparencyData(GenericParticleData.create(2f).build())

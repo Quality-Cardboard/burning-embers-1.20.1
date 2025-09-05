@@ -1,7 +1,14 @@
 {
   "item.burningembers.roaring_inferno": "The Roaring Inferno",
+  "item.burningembers.mechanical_fire": "Mechanical Fire",
   "item.burningembers.ancient_compass": "Ancient Compass",
   "item.burningembers.emp": "EMP",
+
+  "item.burningembers.mechanical_fire_mask": "Mechanical Fire Mask",
+  "item.burningembers.mechanical_fire_chestplate": "Mechanical Fire Chestplate",
+  "item.burningembers.mechanical_fire_leggings": "Mechanical Fire Leggings",
+  "item.burningembers.mechanical_fire_boots": "Mechanical Fire Boots",
+
 
   "death.attack.infernal": "%1$s burst into flames",
   "death.attack.infernal.player": "%1$s's burst into flames whilst fighting %2$s",
