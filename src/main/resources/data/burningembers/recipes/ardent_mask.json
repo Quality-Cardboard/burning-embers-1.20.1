@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#$#",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "burningembers:ardent_alloy"
+    },
+    "$": {
+      "item": "minecraft:wither_skeleton_skull"
+    }
+  },
+  "result": {
+    "item": "burningembers:ardent_mask"
+  }
+}

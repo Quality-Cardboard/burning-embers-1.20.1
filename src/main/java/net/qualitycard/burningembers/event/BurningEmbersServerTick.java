@@ -16,13 +16,13 @@ public class BurningEmbersServerTick implements ServerTickEvents.StartTick {
     @Override
     public void onStartTick(MinecraftServer minecraftServer) {
         ServerWorld serverWorld = minecraftServer.getOverworld();
-        List<ServerPlayerEntity> a  = serverWorld.getPlayers();
-        for (PlayerEntity target : a) {
-            if (target.getEquippedStack(EquipmentSlot.HEAD).getItem() == ModItems.MECHANICAL_FIRE_MASK
-                    && target.getEquippedStack(EquipmentSlot.CHEST).getItem() == ModItems.MECHANICAL_FIRE_CHESTPLATE
-                    && target.getEquippedStack(EquipmentSlot.LEGS).getItem() == ModItems.MECHANICAL_FIRE_LEGGINGS
-                    && target.getEquippedStack(EquipmentSlot.FEET).getItem() == ModItems.MECHANICAL_FIRE_BOOTS) {
-                target.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2));
+        List<ServerPlayerEntity> players  = serverWorld.getPlayers();
+        for (PlayerEntity target : players) {
+            if (target.getEquippedStack(EquipmentSlot.HEAD).getItem() == ModItems.ARDENT_MASK
+                    && target.getEquippedStack(EquipmentSlot.CHEST).getItem() == ModItems.ARDENT_CHESTPLATE
+                    && target.getEquippedStack(EquipmentSlot.LEGS).getItem() == ModItems.ARDENT_LEGGINGS
+                    && target.getEquippedStack(EquipmentSlot.FEET).getItem() == ModItems.ARDENT_BOOTS) {
+                target.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, 1, false, true));
             }
         }
     }

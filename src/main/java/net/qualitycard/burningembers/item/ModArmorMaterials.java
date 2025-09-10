@@ -11,8 +11,8 @@ import net.qualitycard.burningembers.BurningEmbers;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    MECHANICAL_FIRE("mechanical_fire", 37, new int[] { 3, 6, 8, 3 }, 17,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2f, 0.1f, () -> Ingredient.ofItems(Items.ACACIA_BUTTON));
+    ARDENT_ALLOY("ardent_alloy", 37, new int[] { 3, 6, 8, 3 }, 17,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2f, 0.075f, () -> Ingredient.ofItems(ModItems.ARDENT_ALLOY));
 
     private final String name;
     private final int durabilityMultiplier;

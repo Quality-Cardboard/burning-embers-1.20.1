@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "burningembers:ardent_alloy"
+    }
+  },
+  "result": {
+    "item": "burningembers:ardent_boots"
+  }
+}

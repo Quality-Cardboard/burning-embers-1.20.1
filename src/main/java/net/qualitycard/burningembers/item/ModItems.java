@@ -17,21 +17,21 @@ public class ModItems {
     public static final Item ROARING_INFERNO = registerItem("roaring_inferno",
             new RoaringInferno(ToolMaterials.NETHERITE, 4, -1.5f,
                     new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
-    public static final Item MECHANICAL_FIRE = registerItem("mechanical_fire",
+    public static final Item ARDENT_ALLOY = registerItem("ardent_alloy",
             new Item(new FabricItemSettings()));
     public static final Item ANCIENT_COMPASS = registerItem("ancient_compass",
             new AncientCompass(new FabricItemSettings().fireproof().maxCount(1)));
     public static final Item EMP = registerItem("emp",
             new EMP(new FabricItemSettings().maxCount(1)));
 
-    public static final Item MECHANICAL_FIRE_MASK = registerItem("mechanical_fire_mask",
-            new ArmorItem(ModArmorMaterials.MECHANICAL_FIRE, ArmorItem.Type.HELMET, new FabricItemSettings()));
-    public static final Item MECHANICAL_FIRE_CHESTPLATE = registerItem("mechanical_fire_chestplate",
-            new ArmorItem(ModArmorMaterials.MECHANICAL_FIRE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
-    public static final Item MECHANICAL_FIRE_LEGGINGS = registerItem("mechanical_fire_leggings",
-            new ArmorItem(ModArmorMaterials.MECHANICAL_FIRE, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
-    public static final Item MECHANICAL_FIRE_BOOTS = registerItem("mechanical_fire_boots",
-            new ArmorItem(ModArmorMaterials.MECHANICAL_FIRE, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+    public static final Item ARDENT_MASK = registerItem("ardent_mask",
+            new ArmorItem(ModArmorMaterials.ARDENT_ALLOY, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item ARDENT_CHESTPLATE = registerItem("ardent_chestplate",
+            new ArmorItem(ModArmorMaterials.ARDENT_ALLOY, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item ARDENT_LEGGINGS = registerItem("ardent_leggings",
+            new ArmorItem(ModArmorMaterials.ARDENT_ALLOY, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item ARDENT_BOOTS = registerItem("ardent_boots",
+            new ArmorItem(ModArmorMaterials.ARDENT_ALLOY, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BurningEmbers.MOD_ID, name), item);
