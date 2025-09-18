@@ -30,8 +30,7 @@ public class BurningEmbersHudRenderer implements HudRenderCallback {
             if (client.player.hasStatusEffect(ModEffects.INFERNAL.value())) {
                 Identifier texture = new Identifier("burningembers", "textures/screen/infernal_outline.png");
                 // texture, x, y, u, v, width, height, textureWidth, textureHeight
-                context.drawTexture(texture,
-                        0, 0, (int)(screenWidth), (int)(screenHeight),
+                context.drawTexture(texture, 0, 0, (int)(screenWidth), (int)(screenHeight),
                         0, 0, (int)(screenWidth), (int)(screenHeight), (int)(screenWidth), (int)(screenHeight));
 
             }
