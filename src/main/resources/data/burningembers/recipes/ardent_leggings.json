@@ -2,14 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "###",
+    " @ ",
     "# #",
     "# #"
   ],
   "key": {
     "#": {
       "item": "burningembers:ardent_alloy"
+    },
+    "@": {
+      "item": "minecraft:netherite_leggings"
     }
+
   },
   "result": {
     "item": "burningembers:ardent_leggings"

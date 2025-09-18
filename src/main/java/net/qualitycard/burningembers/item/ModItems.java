@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.qualitycard.burningembers.BurningEmbers;
 import net.qualitycard.burningembers.item.custom.AncientCompass;
+import net.qualitycard.burningembers.item.custom.ArdentChestplate;
 import net.qualitycard.burningembers.item.custom.EMP;
 import net.qualitycard.burningembers.item.custom.RoaringInferno;
 
@@ -27,7 +28,7 @@ public class ModItems {
     public static final Item ARDENT_MASK = registerItem("ardent_mask",
             new ArmorItem(ModArmorMaterials.ARDENT_ALLOY, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item ARDENT_CHESTPLATE = registerItem("ardent_chestplate",
-            new ArmorItem(ModArmorMaterials.ARDENT_ALLOY, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+            new ArdentChestplate(ModArmorMaterials.ARDENT_ALLOY, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item ARDENT_LEGGINGS = registerItem("ardent_leggings",
             new ArmorItem(ModArmorMaterials.ARDENT_ALLOY, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item ARDENT_BOOTS = registerItem("ardent_boots",

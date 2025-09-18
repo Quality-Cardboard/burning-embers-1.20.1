@@ -2,13 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "# #",
-    "###",
-    "###"
+    "#@#",
+    " # "
   ],
   "key": {
     "#": {
       "item": "burningembers:ardent_alloy"
+    },
+    "@": {
+      "item": "minecraft:netherite_chestplate"
     }
   },
   "result": {
