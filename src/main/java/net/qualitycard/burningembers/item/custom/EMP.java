@@ -19,11 +19,8 @@ import net.minecraft.util.TypeFilter;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.qualitycard.burningembers.damage_type.ModDamageTypes;
-import net.qualitycard.burningembers.lodestone.packets.ModPackets;
-import net.qualitycard.burningembers.lodestone.packets.ParticleSpawnPacket;
 import net.qualitycard.burningembers.sound.ModSounds;
 
 import java.awt.*;
@@ -68,20 +65,6 @@ public class EMP extends Item {
                     selectedEntity.pushAwayFrom(user);
                 }
             }
-
-
-            Vec3d originalPos = Vec3d.ofCenter(user.getBlockPos());
-
-            Color startingColor = new Color(255, 0, 0);
-            Color endingColor = new Color(155, 0, 0);
-            ParticleSpawnPacket packet = new ParticleSpawnPacket(originalPos, startingColor.getRGB(), endingColor.getRGB());
-            PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
-            packet.toBytes(buf);
-
-            ServerPlayerEntity serverPlayer = (ServerPlayerEntity) user;
-            ServerPlayNetworking.send(serverPlayer, ModPackets.PARTICLE_SPAWN_ID, buf);
-
-
             world.playSound(null, BlockPos.ofFloored(user.getPos()), ModSounds.EMP_EXPLOSION, SoundCategory.MASTER, 10f, 1f);
             user.getItemCooldownManager().set(this, 10);
 
